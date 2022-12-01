@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700&display=swap');
+/* ----------global value----------- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+::before
+::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --light-orange: #e28525;
+    --light-green: #016972;
+    --dark-green: #00403F;
+}
+body{
+    display: grid;
+    place-items: center;
+    color: mintcream;
+    height: 100vh;
+    color: white;
+    font-family: 'Alexandria', sans-serif;
+    
+}
+section{
+    padding: 2.5em;
+}
+h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    
+    font-weight: 600;
+    font-stretch: condensed;
+    margin: 0.7em 0 0.7em 0;
+}
+p{
+    margin-bottom: 3.5em;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+button{
+    padding: 1em 1.5em 1em 1.5em;
+    border: 0;
+    border-radius: 50px;
+    font-weight: 600;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    
+}
+.grid-item{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.box-1{
+    background-color: var(--light-orange);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+}
+.box-2{
+    background-color: var(--light-green);
+}
+.box-3{
+    background-color: var(--dark-green);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* ----------icon--------- */
+
+.icon{
+    display: inline-block;
+    height: 3em;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.icon-sedans{
+    background-image: url('images/icon-sedans.svg');
+}
+.icon-suvs{
+    background-image: url('images/icon-suvs.svg');
+}
+.icon-luxury{
+    background-image: url('images/icon-luxury.svg');
+}
+
+/* ------------button---------- */
+.btn{
+    justify-content: flex-start;
+    display: flex;
+    margin-bottom: 2.5em;
+    margin-left: 2.5em;
+}
+.btn-1{
+    color: var(--light-orange);
+}
+.btn-2{
+    color: var(--light-green);
+}
+.btn-3{
+    color: var(--dark-green);
+}
+
+/* --------mobile-device---------- */
+@media (max-width: 600px){
+    p{
+        margin-bottom: 2em;
+        font-size: 14px;
+    }
+
+    .container{
+        grid-template-columns: auto; 
+        padding: 3em 0 3em 0;
+    }
+    .box-1{
+        
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+
+        border-bottom-left-radius: 0;
+    
+    }
+    .box-3{
+        
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        border-top-right-radius: 0;
+    
+    }
+
+}
